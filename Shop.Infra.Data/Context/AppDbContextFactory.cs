@@ -9,7 +9,7 @@ namespace Shop.Infra.Data.Context
         {
             //TODO: Ajustar para pegar do appsettings
             var optionsBuilder = new DbContextOptionsBuilder<AppDbContext>();
-            optionsBuilder.UseSqlServer("Data Source=DESKTOP-US1KUVV\\SQLEXPRESS;Initial Catalog=ShopDB;Integrated Security=True");
+            optionsBuilder.UseSqlServer("Data Source=DSKUSRWIN01\\SQLEXPRESS;Initial Catalog=ShopDB;Integrated Security=True");
             return new AppDbContext(optionsBuilder.Options);
         }
     }

@@ -1,18 +1,23 @@
 using Microsoft.EntityFrameworkCore;
 using Shop.Infra.Data.Context;
+using Shop.Infrastructure.IoC;
 
 var builder = WebApplication.CreateBuilder(args);
+var Services = builder.Services;
 
-builder.Services.AddDbContext<AppDbContext>(option =>
+Services.AddDbContext<AppDbContext>(option =>
 {
     option.UseSqlServer(
         builder.Configuration.GetConnectionString("ShopConnection"));
 });
 
-builder.Services.AddControllersWithViews();
+Services.AddControllersWithViews();
 
 // Add services to the container.
-builder.Services.AddControllersWithViews();
+Services.AddControllersWithViews();
+
+ConfigureServices.AddServices(Services);
+ConfigureServices.AddRepositories(Services);
 
 var app = builder.Build();
 
