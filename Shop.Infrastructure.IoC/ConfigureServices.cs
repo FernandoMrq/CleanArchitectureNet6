@@ -1,5 +1,8 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Shop.Application.Interfaces;
+using Shop.Application.Services;
+using Shop.Domain.Interfaces;
+using Shop.Infra.Data.Repositories;
 
 namespace Shop.Infrastructure.IoC
 {
@@ -7,12 +10,12 @@ namespace Shop.Infrastructure.IoC
     {
         public static void AddServices(IServiceCollection services)
         {
-            services.AddScoped<IProductService, IProductService>();
+            services.AddScoped<IProductService, ProductService>();
         }
 
         public static void AddRepositories(IServiceCollection services)
         {
-            services.AddScoped<IProductRepository, IProductRepository>();
+            services.AddScoped<IProductRepository, ProductRepository>();
         }
     }
 }

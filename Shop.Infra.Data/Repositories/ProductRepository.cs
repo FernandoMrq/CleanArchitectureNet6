@@ -1,5 +1,6 @@
 ﻿using Shop.Application.Interfaces;
 using Shop.Domain.Entities;
+using Shop.Domain.Interfaces;
 using Shop.Infra.Data.Context;
 
 namespace Shop.Infra.Data.Repositories

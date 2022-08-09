@@ -1,6 +1,6 @@
 ﻿using Shop.Domain.Entities;
 
-namespace Shop.Application.Interfaces
+namespace Shop.Domain.Interfaces
 {
     public interface IProductRepository
     {

@@ -1,5 +1,6 @@
 ﻿using Shop.Application.Interfaces;
 using Shop.Application.ViewModels;
+using Shop.Domain.Interfaces;
 
 namespace Shop.Application.Services
 {
